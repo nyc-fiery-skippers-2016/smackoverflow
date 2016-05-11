@@ -1,0 +1,15 @@
+<h2>sign up for battle</h2>
+
+<%if @errors%>
+<ul>
+<%@errors.each do |error|%>
+<li><%=error%></li>
+<%end%>
+<%end%>
+</ul>
+
+<form id="signup-form" method="post" action="/users">
+  <input id="username" type="text" name="user[username]" placeholder="choose your name">
+  <input id="password" type="password" name="user[password]" placeholder="secret cryptic code">
+  <input id="button" type="submit" value="enter the kingdom">
+</form>
