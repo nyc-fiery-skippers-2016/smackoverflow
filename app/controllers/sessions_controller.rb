@@ -9,7 +9,7 @@ end
 post '/login' do
   @user = User.new(params[:user])
 
-  if @login.save
+  if @user.save
     session[:user_id] = @user.id
     redirect '/'
   else
