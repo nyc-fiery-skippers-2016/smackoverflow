@@ -1,5 +1,5 @@
 get '/login' do
-  if logged_in
+  if logged_in?
     redirect '/'
   else
     erb :'login/new'
@@ -8,7 +8,6 @@ end
 
 post '/login' do
   @user = User.find_by(params[:user])
-
   if @user
     session[:user_id] = @user.id
     redirect '/'
