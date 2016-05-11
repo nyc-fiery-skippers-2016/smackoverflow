@@ -12,8 +12,3 @@ post '/users' do
     erb: '/users/new'
   end
 end
-
-get '/users/:id' do
-##pull in information for user's show page here. 
-
-end
