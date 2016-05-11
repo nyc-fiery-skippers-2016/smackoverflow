@@ -7,9 +7,9 @@ get '/login' do
 end
 
 post '/login' do
-  @user = User.new(params[:user])
+  @user = User.find_by(params[:user])
 
-  if @user.save
+  if @user
     session[:user_id] = @user.id
     redirect '/'
   else
