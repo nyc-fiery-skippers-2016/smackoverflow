@@ -1,0 +1,12 @@
+<h1>Winter Is Coming, <%= current_user.username %></h1>
+<p>
+  <%= @quote %>
+</p>
+
+<ul>
+  <% @questions.each do |question| %>
+      <li>
+        <a href="/questions/<%= question.id %>"><%= question.title %></a>
+      </li>
+  <%end%>
+</ul>
