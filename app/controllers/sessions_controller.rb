@@ -1,5 +1,5 @@
 get '/login' do
-  if logged_in
+  if logged_in?
     redirect '/'
   else
     erb :'login/new'
