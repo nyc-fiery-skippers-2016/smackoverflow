@@ -7,10 +7,10 @@ get '/login' do
 end
 
 post '/login' do
-  @user = User.find_by(params[:user])
+  user = User.find_by(username: params[:username])
 
-  if @user
-    session[:user_id] = @user.id
+  if user && user.authenticate(params[:password])
+    session[:user_id] = user.id
     redirect '/'
   else
     @errors = ["Did you input a username and password?"]
