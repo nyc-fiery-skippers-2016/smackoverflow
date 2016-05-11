@@ -22,13 +22,13 @@
 <body>
   <nav>
     <ul>
-        <li><a href=""></a>Home</li>
+        <li><a href="/questions">Home</a></li>
       <% if logged_in? %>
-        <li><a href=""></a><%= @user.username %></li>
-        <li><a href=""></a>Logout</li>
+        <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+        <li><a href="/logout">Logout</a></li>
       <% else %>
-        <li><a href=""></a>Login</li>
-        <li><a href=""></a>Sign Up</li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/users/new">Sign Up</a></li>
       <% end %>
     </ul>
   </nav>
