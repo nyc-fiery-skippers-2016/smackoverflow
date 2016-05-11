@@ -1,5 +1,9 @@
 get '/login' do
-  erb :'login/new'
+  if logged_in
+    redirect '/'
+  else
+    erb :'login/new'
+  end
 end
 
 post '/login' do
@@ -12,4 +16,9 @@ post '/login' do
     @errors = ["Did you input a username and password?"]
     erb :'login/new'
   end
+end
+
+get '/logout' do
+  session.clear
+  redirect '/'
 end
