@@ -1,6 +1,6 @@
 - git checkout master
 - git pull origin master
-- git checkout -b new-feature
+- git checkout -b 'feature'
 
 - ** make changes **
 - ** add change **
@@ -9,6 +9,8 @@
 - git checkout master
 - git pull origin master
 
-- git checkout new-feature
-- git rebase master
-- git push origin new-feature
+- git checkout 'feature'
+- git rebase master *OR* git merge master
+- git push origin 'feature'
+
+- make a pull request
