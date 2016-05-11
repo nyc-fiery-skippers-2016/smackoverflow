@@ -1,12 +1,12 @@
 <h2>sign up for battle</h2>
 
 <%if @errors%>
-<ul>
-<%@errors.each do |error|%>
-<li><%=error%></li>
+  <ul>
+    <%@errors.each do |error|%>
+      <li><%=error%></li>
+    <%end%>
+  </ul>
 <%end%>
-<%end%>
-</ul>
 
 <form id="signup-form" method="post" action="/users">
   <input id="username" type="text" name="user[username]" placeholder="choose your name">

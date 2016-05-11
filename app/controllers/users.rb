@@ -1,5 +1,5 @@
 get '/users/new' do
-  erb: 'users/new'
+  erb :'users/new'
 end
 
 post '/users' do
@@ -9,6 +9,6 @@ post '/users' do
     redirect "/"
   else
     @errors = user.errors.full_messages
-    erb: '/users/new'
+    erb :'/users/new'
   end
 end
