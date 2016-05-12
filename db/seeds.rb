@@ -6,4 +6,4 @@ Question.create(title: "What would Tyrion Lannister say if you told him you don'
 
 Comment.create(body: "I don't know, but good for you!", user_id: 2, commentable_id: 1, commentable_type: "Question")
 
-Answer.create(body: "I have no control over these sorts of things. Sorry!", question_id: 1, user_id: 3)
+Answer.create(body: "I have no control over these sorts of things. Sorry!", question_id: 1, user_id: 3g)
