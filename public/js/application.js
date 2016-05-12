@@ -26,5 +26,19 @@ $(document).ready(function(){
     $("#popup-new-question").show();
   });
 
+  $(".new-comment").submit(function(e) {
+    e.preventDefault();
+    var target = e.target;
+    var type = target.method;
+    var url = target.action;
+    var data = $(target).serialize();
 
+    $.ajax({
+      type: type,
+      url: url,
+      data: data
+    }).done(function(response) {
+      $('#question-comments-container').append(response);
+    });
+  });
 });
