@@ -1,11 +1,19 @@
 <div id="question-container">
   <%= erb :'votes/_vote', locals: { type: @question } %>
   <%= erb :'questions/_question', locals: { question: @question } %>
+  <div class="votes">
+    <h2>vote count</h2>
+    <%= @question.count_votes %>
+  </div>
 
   <div id="question-comments-container">
     <% @comments.each do | comment | %>
       <%= erb :'/votes/_vote', locals: { type: comment } %>
       <%= erb :'questions/_comment', locals: { comment: comment } %>
+      <div class="votes">
+        <h2>vote count</h2>
+        <%= @question.count_votes %>
+      </div>
     <% end %>
 
     <%= erb :'/comments/new', locals: { type: @question } %>
@@ -22,11 +30,20 @@
         <% answer.comments.each do |answer_comment| %>
           <%= erb :'votes/_vote', locals: {type: answer_comment} %>
           <%=erb :'questions/_comment', locals: {comment: answer_comment}%>
+          <div class="votes">
+            <h2>vote count</h2>
+            <%= @question.count_votes %>
+          </div>
         <% end %>
+
       </div>
       <%= erb :'/comments/new', locals: { type: answer } %>
   <% end %>
     <div id="new-answer-container">
       <%= erb :'answers/new' %>
+    </div>
+    <div class="votes">
+      <h2>vote count</h2>
+      <%= @question.count_votes %>
     </div>
 </div>
