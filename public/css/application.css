@@ -1,3 +1,41 @@
+body {
+  background: url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcQeBn6ttFubnZIwuCclYoWUrQ5CzUxKJAdGerfOdrOQdnYAPWppzdhAKgBowjjruiCLxKeKQ.7IO2_2p4P_o2DiuNKN8rlD.vBNBt7RCvrQKj3n6UWeKDYz7JGx9PrC0.3O3IexVjtmmKZMrCosvanH7Hx9vR2fVRoOWJg1_EPDc-&format=jpg');
+  font-family: 'fantasy';
+}
+
+nav {
+  background-color:
+}
+
 nav ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  display: inline;
+  width: 100px;
+}
+
+.nav_link {
+  float: right;
+}
+
+#home_button {
+  float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
