@@ -60,6 +60,7 @@ end
 # this destroys the question from the database
 delete '/questions/:id' do
   question = Question.find_by( id: params[ :id ] )
+  question.destroy_dependencies
   question.destroy
   redirect '/questions'
 end

@@ -19,4 +19,10 @@ class Question < ActiveRecord::Base
     comments.length
   end
 
+  def destroy_dependencies
+    answers.each{|answer| answer.destroy}
+    comments.each{|comment| comment.destroy}
+    votes.each{|vote| vote.destroy}
+  end
+
 end
