@@ -1,9 +1,3 @@
-<li>
-  <h3><%= answer.user_id %></h3>
-  <p><%= answer.body %></p>
-  <ul>
-    <% answer.comments.each do |comment| %>
-      <%= erb :'/questions/_comment' %>
-    <% end %>
-  </ul>
-</li>
+<ul>
+  <li><%= answer.body %></li>
+</ul>
