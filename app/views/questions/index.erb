@@ -1,8 +1,26 @@
-<div class="container">
   <h1>all questions</h1>
+<div class="container">
   <%@questions.each do |question|%>
     <div class="question" id="<%=question.id%>">
-      <%= erb :'/questions/_question', layout: false, locals: { question: question } %>
+
+      <table class="stats">
+        <tr>
+          <td><%=Question.count_votes(question)%></td>
+          <td><%=question.number_of_answers%></td>
+          <td><%=question.number_of_comments%></td>
+        </tr>
+        <tr>
+          <td>vote</td>
+          <td>answers</td>
+          <td>comments</td>
+        </tr>
+      </table>
+      <table class="title_and_author">
+        <tr>
+          <td><a href="/questions/<%=question.id%>"><%=question.title%></a></td>
+          <td><a href="/users/<%=question.user.id%>"><%=question.user.username%></a></td>
+        </tr>
+      </table>
     </div>
   <%end%>
 </div>
