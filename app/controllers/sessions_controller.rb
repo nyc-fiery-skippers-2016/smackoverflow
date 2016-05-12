@@ -12,9 +12,12 @@ post '/login' do
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
     redirect '/'
-  else
-    @errors = ["Did you input a username and password?"]
+  elsif user
+    @errors = ["Incorrect password!"]
     erb :'login/new'
+  else
+    @errors = ["No such user found! Please make a new account:"]
+    erb :'users/new'
   end
 end
 

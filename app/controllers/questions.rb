@@ -26,6 +26,7 @@ end
 # this shows a specific question on a show page
 get '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
+  @vote_count = Question.count_votes(@question)
   erb :'questions/show'
 end
 
@@ -42,7 +43,6 @@ put 'questions/:id' do
   if @question.save
     redirect "/questions/<%= @question.id %>"
   else
-    # test error handling
     @errors = @question.errors.full_messages
     erb :'questions/edit'
   end
