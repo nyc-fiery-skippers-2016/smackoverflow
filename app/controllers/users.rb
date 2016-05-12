@@ -15,7 +15,6 @@ end
 
 get '/users/:id' do
   if current_user.id == params[:id].to_i
-    # @user = User.find_by(id: params[:id])
     @questions = current_user.questions
     @quote = User.get_quote
     erb :'/users/show'
