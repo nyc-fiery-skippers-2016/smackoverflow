@@ -6,8 +6,8 @@ class Question < ActiveRecord::Base
 
   validates :body, :title, presence: true
 
-  def self.count_votes(question)
-    votes = question.votes
+  def count_votes
+    return 0 if votes.empty? || votes.nil?
     votes.map{|vote| vote.value }.map(&:to_i).inject(:+)
   end
 
