@@ -4,10 +4,29 @@
   color: white;
 }
 
-.container h1 {
+h1 {
   text-align: center;
+  color: white;
 }
 
 .question {
+  clear: both;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.stats {
+  overflow:hidden;
+  float: right;
+}
+.stats td {
+  text-align: center;
+}
+
+.title_and_author {
+  overflow: hidden;
+  float: left;
+}
+.title_and_author a {
+  text-decoration: none;
+  color: white;
 }

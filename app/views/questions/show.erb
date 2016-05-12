@@ -13,6 +13,7 @@
 </div>
 
 <div id="question-answers-container">
+  <h2>Answers</h2>
     <% @answers.each do | answer | %>
       <%= erb :'/votes/_vote', locals: { type: answer } %>
       <%= erb :'questions/_answer', locals: { answer: answer } %>
