@@ -6,7 +6,7 @@
 #vote-container {
   float: left;
   clear: left;
-  background-color: white;
+  background-color: transparent;
 }
 
 #question-container > h2 {
@@ -27,6 +27,18 @@
   float: right;*/
 }
 
+.vote {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.vote li {
+  text-align: center;
+  margin: 10px;
+}
+
 .up-vote {
   display: inline-block;
 }
@@ -35,11 +47,9 @@
 }
 
 #upvote {
-  background: rgba(0 0 0 1);
 }
 
 #downvote {
-  background: rgba(0 0 0 1);
 }
 
 .question-comments > ul {
