@@ -52,7 +52,7 @@ put '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
   @question.assign_attributes( params[ :question ] )
   if @question.save
-    redirect "/questions/<%= @question.id %>"
+    redirect "/questions/#{ @question.id }"
   else
     @errors = @question.errors.full_messages
     erb :'questions/edit'
