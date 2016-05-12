@@ -1,6 +1,13 @@
-<article class="single-question">
-    <h3 class="question-title"><%= question.title %></h3>
-    <p class="question-body">
-      <%= question.body %>
-    </p>
-</article>
+<h2><%= question.title %></h2>
+<p><%= question.body %></p>
+
+<% if logged_in? && question.user_id == current_user.id %>
+  <p><a id="edit" href="/questions/<%= question.id %>/edit">Edit</a></p>
+    <div id="editform" class="hidden">
+      <%= erb :'questions/edit', layout: false, locals: { question: question } %>
+    </div>
+  <p><form action="/questions/<%= question.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form></p>
+<% end %>
