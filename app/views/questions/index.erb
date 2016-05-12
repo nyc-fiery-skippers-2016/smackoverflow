@@ -1,1 +1,10 @@
-<h3>Ready</h3>
+<div class="container">
+<h1>all questions</h1>
+<%@questions.each do |question|%>
+<div class="question">
+  <h2><%=question.title%></h2>
+  <p><%=question.body%></p>
+</div>
+<%end%>
+
+</div>
