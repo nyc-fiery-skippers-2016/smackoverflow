@@ -5,13 +5,7 @@
 
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/home.css">
-  <link rel="stylesheet" href="/css/new-topic.css">
-  <link rel="stylesheet" href="/css/topics.css">
-  <link rel="stylesheet" href="/css/post.css">
-  <link rel="stylesheet" href="/css/new-post.css">
-  <link rel="stylesheet" href="/css/your-topics.css">
-  <link rel="stylesheet" href="/css/tags.css">
+  <link rel="stylesheet" href="/css/questions.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -21,7 +15,7 @@
 
 <body>
   <nav>
-    <ul>
+    <ul class="nav_bar">
         <li id="home_button"><a href="/questions">Home</a></li>
       <% if logged_in? %>
         <li class="nav_link"><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
@@ -32,8 +26,16 @@
       <% end %>
     </ul>
   </nav>
-  <main></main>
   <%= yield %>
-  <footer></footer>
+  <footer>
+    <ul class="nav_bar">
+      <% if logged_in? %>
+        <li class="nav_link"><a href="/questions/new">New Question</a></li>
+      <% else %>
+        <li class="nav_link"><a href="/login">Login</a></li>
+        <li class="nav_link"><a href="/users/new">Sign Up</a></li>
+      <% end %>
+    </ul>
+  </footer>
 </body>
 </html>
