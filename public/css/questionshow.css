@@ -1,0 +1,39 @@
+#question-container {
+  margin: auto;
+  width: 60%;
+}
+
+#vote-container {
+  display: inline-block;
+  float: left;
+}
+#vote-container > h2 {
+  display: inline-block;
+  width: 60%;
+  margin: auto;
+}
+#vote-container > p {
+  display: inline-block;
+  margin: auto;
+}
+
+.up-vote input[type='submit'] {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0px; line-height: 0px;
+  height: 30px; width: 30px;
+  border: 0;
+  background: url('http://images.uesp.net/8/8b/SR-icon-weapon-NordHeroSword.png');
+  background-size: contain;
+  padding-bottom: 5px;
+}
+.down-vote input[type='submit'] {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0px; line-height: 0px;
+  height: 30px; width: 30px;
+  border: 0;
+  background: url('http://images.uesp.net/8/8b/SR-icon-weapon-NordHeroSword.png');
+  background-size: contain;
+  transform: rotate(180deg);
+}
