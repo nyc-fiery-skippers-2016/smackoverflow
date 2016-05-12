@@ -31,6 +31,8 @@ end
 # this shows a specific question on a show page
 get '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
+  @comments = Comment.where( commentable_type: "Question", commentable_id: params[:id] )
+  @answers = Answer.where( question_id: params[:id] )
   @vote_count = Question.count_votes(@question)
   erb :'questions/show'
 end
