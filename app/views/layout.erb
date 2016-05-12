@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <link rel="stylesheet" href="/css/normalize.css">
 
   <link rel="stylesheet" href="/css/application.css">
@@ -19,22 +18,22 @@
 
   <title>Throne Overthrow</title>
 </head>
+
 <body>
   <nav>
     <ul>
-        <li><a href="/questions">Home</a></li>
+        <li id="home_button"><a href="/questions">Home</a></li>
       <% if logged_in? %>
-        <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li class="nav_link"><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+        <li class="nav_link"><a href="/logout">Logout</a></li>
       <% else %>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/users/new">Sign Up</a></li>
+        <li class="nav_link"><a href="/login">Login</a></li>
+        <li class="nav_link"><a href="/users/new">Sign Up</a></li>
       <% end %>
     </ul>
   </nav>
-
+  <main></main>
   <%= yield %>
-
   <footer></footer>
 </body>
 </html>
