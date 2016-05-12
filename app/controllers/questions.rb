@@ -6,7 +6,12 @@ end
 
 # this serves a form to post a new question
 get '/questions/new' do
-  erb :'/questions/new'
+  if logged_in?
+    erb :'/questions/new'
+  else
+    @errors = ["You must be logged in to do this."]
+    erb :'/login/new'
+  end
 end
 
 # this handles saving the new question
@@ -33,11 +38,15 @@ end
 # this serves a specific question for editing
 get '/questions/:id/edit' do
   @question = Question.find_by( id: params[ :id ] )
-  erb :'questions/edit'
+  if logged_in? && current_user.id == @question.user_id
+    erb :'questions/edit'
+  else
+    redirect '/questions/index'
+  end
 end
 
 # this handles saving and posting the edited question
-put 'questions/:id' do
+put '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
   @question.assign_attributes( params[ :question ] )
   if @question.save
@@ -49,7 +58,7 @@ put 'questions/:id' do
 end
 
 # this destroys the question from the database
-delete 'questions/:id' do
+delete '/questions/:id' do
   question = Question.find_by( id: params[ :id ] )
   question.destroy
   redirect '/questions'
