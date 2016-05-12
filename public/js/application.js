@@ -40,16 +40,17 @@ $(document).ready(function(){
       url: url,
       data: data
     }).done(function(response) {
+      var id = e.target.parentElement.getAttribute("id")
       if (data.indexOf('Question') >= 0) {
-        $('#question-comments-container').append(response);
+        $('.question-comments-container').append(response);
       }
       else {
-        $('#answers-comments-container').append(response);
+        $("#"+id).append(response);
       }
     });
   });
 
-  $('#new-answer-container').on( 'submit', '.new-answer-form', function(e) {
+  $('.new-answer-container').on( 'submit', '.new-answer-form', function(e) {
     e.preventDefault()
     var target = e.target;
     var type = target.method;
