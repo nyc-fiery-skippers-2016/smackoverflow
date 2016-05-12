@@ -1,0 +1,14 @@
+<article class="answer-comments">
+  <ul>
+    <li><%= answer.body %></li>
+  </ul>
+</article>
+
+<form class="new-comment" action="/comments" method="post">
+  <input type="hidden" name="question_id" value="<%= question_id %>">
+  <input type="hidden" name="comment[commentable_id]" value="<%= type.id %>">
+  <input type="hidden" name="comment[commentable_type]" value="<%= type.class.to_s %>">
+  <input type="hidden" name="comment[user_id]" value="<%= current_user.id %>">
+  <input type="text" name="comment[body]" placeholder="I drink and I know things...">
+  <input type="submit" value="Add Your Two Cents">
+</form>

@@ -1,32 +1,44 @@
-<div id="question-container">
-  <%= erb :'votes/_vote', locals: { type: @question } %>
-  <%= erb :'questions/_question', locals: { question: @question } %>
+<div id ="question-answer-parent">
 
-  <div id="question-comments-container">
-    <% @comments.each do | comment | %>
-      <%= erb :'/votes/_vote', locals: { type: comment } %>
-      <%= erb :'questions/_comment', locals: { comment: comment } %>
-    <% end %>
+  <div id="question-container">
+    <%= erb :'votes/_vote', locals: { type: @question } %>
+    <%= erb :'questions/_question', locals: { question: @question } %>
 
-    <%= erb :'/comments/new', locals: { type: @question } %>
+    <div class="question-comments-container">
+      <% @comments.each do | comment | %>
+        <%= erb :'/votes/_vote', locals: { type: comment } %>
+        <%= erb :'questions/_comment', locals: { comment: comment } %>
+      <% end %>
+
+      <%= erb :'/comments/new', locals: { type: @question } %>
+    </div>
   </div>
-</div>
 
+<<<<<<< 5e5f1e6266aafbe9f252fedc3689d8a56fa6ecc2
 <div id="question-answers-container">
   <h2>Answers</h2>
     <% @answers.each do | answer | %>
       <%= erb :'/votes/_vote', locals: { type: answer } %>
       <%= erb :'questions/_answer', locals: { answer: answer } %>
+=======
+  <div id="question-answers-container">
+      <% @answers.each do | answer | %>
+        <%= erb :'/votes/_vote', locals: { type: answer } %>
+        <%= erb :'questions/_answer', locals: { answer: answer } %>
 
-      <div id="answers-comments-container">
-        <% answer.comments.each do |answer_comment| %>
-          <%= erb :'votes/_vote', locals: {type: answer_comment} %>
-          <%=erb :'questions/_comment', locals: {comment: answer_comment}%>
-        <% end %>
+        <div id="<%= answer.id %>">
+          <% answer.comments.each do |answer_comment| %>
+            <%= erb :'votes/_vote', locals: {type: answer_comment} %>
+            <%=erb :'questions/_comment', locals: {comment: answer_comment}%>
+          <% end %>
+        <%= erb :'/comments/new', locals: { type: answer } %>
       </div>
-      <%= erb :'/comments/new', locals: { type: answer } %>
-  <% end %>
-    <div id="new-answer-container">
-      <%= erb :'answers/new' %>
-    </div>
+    <% end %>
+  </div>
+
+  <div class="new-answer-container">
+    <%= erb :'answers/new' %>
+  </div>
+>>>>>>> Fix adding answer comments, need to fix comments on new answers
+
 </div>
