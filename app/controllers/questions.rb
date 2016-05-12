@@ -23,7 +23,7 @@ end
 # this shows a specific question on a show page
 get '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
-  @vote_count = Question.vote_count(@question)
+  @vote_count = Question.count_votes(@question)
   erb :'questions/show'
 end
 
