@@ -11,4 +11,12 @@ class Question < ActiveRecord::Base
     votes.map{|vote| vote.value }.map(&:to_i).inject(:+)
   end
 
+  def number_of_answers
+    answers.length
+  end
+
+  def number_of_comments
+    comments.length
+  end
+
 end
