@@ -6,7 +6,12 @@ end
 
 # this serves a form to post a new question
 get '/questions/new' do
-  erb :'/questions/new'
+  if logged_in?
+    erb :'/questions/new'
+  else
+    @errors = ["You must be logged in to do this."]
+    erb :'/login/new'
+  end
 end
 
 # this handles saving the new question
@@ -33,7 +38,11 @@ end
 # this serves a specific question for editing
 get '/questions/:id/edit' do
   @question = Question.find_by( id: params[ :id ] )
-  erb :'questions/edit'
+  if logged_in? && current_user.id == @question.user_id
+    erb :'questions/edit'
+  else
+    redirect '/questions/index'
+  end
 end
 
 # this handles saving and posting the edited question
