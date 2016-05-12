@@ -1,4 +1,14 @@
 <h1>Edit the Question</h1>
+<% if @errors %>
+    <div>
+      <span>Your entry could not be saved:</span>
+      <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <form method="post" action="/questions/<%= @question.id %>">
     <input type="hidden" name="_method" value="put">

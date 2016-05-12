@@ -37,7 +37,7 @@ get '/questions/:id/edit' do
 end
 
 # this handles saving and posting the edited question
-put 'questions/:id' do
+put '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
   @question.assign_attributes( params[ :question ] )
   if @question.save
@@ -49,7 +49,7 @@ put 'questions/:id' do
 end
 
 # this destroys the question from the database
-delete 'questions/:id' do
+delete '/questions/:id' do
   question = Question.find_by( id: params[ :id ] )
   question.destroy
   redirect '/questions'
