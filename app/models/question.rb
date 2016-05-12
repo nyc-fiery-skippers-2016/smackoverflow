@@ -8,7 +8,15 @@ class Question < ActiveRecord::Base
 
   def self.count_votes(question)
     votes = question.votes
-    votes.map{|vote| vote.value }.inject(:+)
+    votes.map{|vote| vote.value }.map(&:to_i).inject(:+)
+  end
+
+  def number_of_answers
+    answers.length
+  end
+
+  def number_of_comments
+    comments.length
   end
 
 end
