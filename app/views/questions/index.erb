@@ -1,12 +1,15 @@
 <div class="container">
   <h1>all questions</h1>
   <%@questions.each do |question|%>
-    <div class="question">
+    <div class="question" id="<%=question.id%>">
       <h2><%=question.title%></h2>
       <p><%=question.body%></p>
 
       <% if logged_in? && question.user_id == current_user.id %>
-        <p><a href="/questions/<%= question.id %>/edit">Edit</a></p>
+        <p><a id="edit" href="/questions/<%= question.id %>/edit">Edit</a></p>
+          <div id="editform">
+            <%= erb :'questions/edit' %>
+          </div>
         <p><form action="/questions/<%= question.id %>" method="post">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Delete">
