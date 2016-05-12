@@ -1,9 +1,9 @@
-<h1>A wise man once said the true history of the world is the history of great conversations in elegant rooms -Tyrion Lannister</h1>
-<h3>If your answer provides wisdom that Tyrion would approve of, then please answer below!</h3>
+<!-- <h1>A wise man once said the true history of the world is the history of great conversations in elegant rooms -Tyrion Lannister</h1>
+<h3>If your answer provides wisdom that Tyrion would approve of, then please answer below!</h3> -->
 
-<form class="new-answer-form" action="/answer" method="post">
-  <input type="hidden" name="answer[user_id]" value="<%= current_user.id %>">
+<form class="new-answer-form" action="/answers" method="post">
   <input type="hidden" name="answer[question_id]" value="<%= @question.id %>">
-  <input type="text" name="answer[body]" placeholder="My answer to your question is...">
+  <input type="hidden" name="answer[user_id]" value="<%= current_user.id %>">
+  <input type="text" name="answer[body]" placeholder="I drink and I know things...">
   <input type="submit" value="Answer This Question">
 </form>

@@ -7,6 +7,8 @@
       <%= erb :'/votes/_vote', locals: { type: comment } %>
       <%= erb :'questions/_comment', locals: { comment: comment } %>
     <% end %>
+
+    <%= erb :'/comments/new', locals: { type: @question } %>
   </div>
 </div>
 
@@ -21,5 +23,9 @@
           <%=erb :'questions/_comment', locals: {comment: answer_comment}%>
         <% end %>
       </div>
+      <%= erb :'/comments/new', locals: { type: answer } %>
   <% end %>
+    <div id="new-answer-container">
+      <%= erb :'answers/new' %>
+    </div>
 </div>
