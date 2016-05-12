@@ -26,7 +26,9 @@ $(document).ready(function(){
     $("#popup-new-question").show();
   });
 
-  $(".new-comment").submit(function(e) {
+  // $(".new-comment").submit(function(e) {
+
+  $("#question-answer-parent").on('submit', '.new-comment',function(e) {
     e.preventDefault();
     var target = e.target;
     var type = target.method;
@@ -38,7 +40,28 @@ $(document).ready(function(){
       url: url,
       data: data
     }).done(function(response) {
-      $('#question-comments-container').append(response);
+      if (data.indexOf('Question') >= 0) {
+        $('#question-comments-container').append(response);
+      }
+      else {
+        $('#answers-comments-container').append(response);
+      }
     });
   });
+
+  $('#new-answer-container').on( 'submit', '.new-answer-form', function(e) {
+    e.preventDefault()
+    var target = e.target;
+    var type = target.method;
+    var url = target.action;
+    var data = $(target).serialize();
+
+    $.ajax({
+      type: type,
+      url: url,
+      data: data
+    }).done(function(response) {
+      $('#question-answers-container').append(response)
+    })
+  })
 });
