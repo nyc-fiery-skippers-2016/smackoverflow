@@ -5,3 +5,7 @@
 .active{
   display:block;
 }
+
+.nav_bar .hidden{
+  display:none;
+}
