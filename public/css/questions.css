@@ -1,0 +1,13 @@
+.container {
+  margin: auto;
+  width: 50%;
+  color: white;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.question {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
