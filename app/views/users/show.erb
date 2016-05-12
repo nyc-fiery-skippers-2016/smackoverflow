@@ -9,8 +9,8 @@
         <table class="stats">
           <tr>
             <td><%=question.count_votes%></td>
-            <td><%=question.number_of_answers%></td>
-            <td><%=question.number_of_comments%></td>
+            <td><%=question.count_answers%></td>
+            <td><%=question.count_comments%></td>
           </tr>
           <tr>
             <td>vote</td>
@@ -32,7 +32,7 @@
     <table class="stats">
       <tr>
         <td><%=answer.count_votes%></td>
-        <td><%=answer.number_of_comments%></td>
+        <td><%=answer.count_comments%></td>
       </tr>
       <tr>
         <td>vote</td>
@@ -60,7 +60,7 @@
     </table>
     <table class="title_and_author">
       <tr>
-        <td><a href="/questions/<%=comment.question_id%>"><%=comment.blurb%></a></td>
+        <td><a href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
       </tr>
     </table>
   <% end %>
