@@ -1,8 +1,7 @@
 <div id="question-container">
-  <h1>This the question. Don't get it twisted</h1>
   <%= erb :'votes/_vote', locals: { type: @question } %>
   <%= erb :'questions/_question', locals: { question: @question } %>
-  <h1>These are the comments for the question. Don't get it twisted</h1>
+
   <div id="question-comments-container">
     <% @comments.each do | comment | %>
       <%= erb :'/votes/_vote', locals: { type: comment } %>
@@ -12,12 +11,10 @@
 </div>
 
 <div id="question-answers-container">
-  <h1>The following are answers. Don't get it twisted</h1>
     <% @answers.each do | answer | %>
       <%= erb :'/votes/_vote', locals: { type: answer } %>
       <%= erb :'questions/_answer', locals: { answer: answer } %>
 
-      <h1>These are the comments on the answers</h1>
       <div id="answers-comments-container">
         <% answer.comments.each do |answer_comment| %>
           <%= erb :'votes/_vote', locals: {type: answer_comment} %>
