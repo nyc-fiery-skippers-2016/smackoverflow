@@ -5,4 +5,10 @@ class Question < ActiveRecord::Base
   has_many :comments, as: :commentable
 
   validates :body, :title, presence: true
+
+  def self.count_votes(question)
+    votes = question.votes
+    votes.map{|vote| vote.value }.inject(:+)
+  end
+
 end
