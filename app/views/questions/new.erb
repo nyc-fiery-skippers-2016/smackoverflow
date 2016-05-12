@@ -1,0 +1,16 @@
+<% if @errors %>
+    <div>
+      <span>Your entry could not be saved:</span>
+      <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form method="post" action="/questions">
+    <input name="title" type="text" placeholder="question title">
+    <input name="body" type="text" placeholder="question body">
+    <input type="submit" value="submit" class="button">
+  </form>

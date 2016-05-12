@@ -6,17 +6,20 @@ end
 
 # this serves a form to post a new question
 get '/questions/new' do
-  erb :'questions/new'
+  erb :'/questions/new'
 end
 
 # this handles saving the new question
 post '/questions' do
-  @question = Question.new( params[:question] )
+  title = params[:title]
+  body = params[:body]
+  user_id = current_user.id
+  @question = Question.new(title: title, body: body, user_id: user_id)
   if @question.save
-    redirect '/questions'
+    redirect "/questions/#{@question.id}"
   else
     @errors = @question.errors.full_messages
-    erb :'questions/new'
+    erb :'/questions/new'
   end
 end
 
