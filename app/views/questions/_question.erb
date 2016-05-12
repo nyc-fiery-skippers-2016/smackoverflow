@@ -4,7 +4,12 @@
 <% if logged_in? && question.user_id == current_user.id %>
   <p><a id="edit" href="/questions/<%= question.id %>/edit">Edit</a></p>
     <div id="editform" class="hidden">
-      <%= erb :'questions/edit', layout: false, locals: { question: question } %>
+      <form method="post" action="/questions/<%= question.id %>">
+        <input type="hidden" name="_method" value="put">
+        <input name="question[title]" type="text" value="<%= question.try(:title) %>">
+        <input name="question[body]" type="text" value="<%= question.try(:body) %>">
+        <input type="submit" value="Update Question" class="button">
+      </form>
     </div>
   <p><form action="/questions/<%= question.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
