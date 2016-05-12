@@ -19,4 +19,11 @@ class User < ActiveRecord::Base
 
     quotes.sample
   end
+
+  def destroy_dependencies
+    questions.each{|question| question.destroy}
+    answers.each{|answer| answer.destroy}
+    comments.each{|comment| comment.destroy}
+    votes.each{|vote| vote.destroy}
+  end
 end
