@@ -33,7 +33,7 @@ get '/questions/:id' do
   @question = Question.find_by( id: params[ :id ] )
   @comments = @question.comments
   @answers = Answer.where( question_id: params[:id] )
-  @vote_count = Question.count_votes(@question)
+  @vote_count = @question.count_votes
   erb :'questions/show'
 end
 
