@@ -3,10 +3,33 @@
   <%= @quote %>
 </p>
 
-<ul>
+<div class="question">
   <% @questions.each do |question| %>
-      <li>
         <a href="/questions/<%= question.id %>"><%= question.title %></a>
-      </li>
+        <table class="stats">
+          <tr>
+            <td><%=question.count_votes%></td>
+            <td><%=question.number_of_answers%></td>
+            <td><%=question.number_of_comments%></td>
+          </tr>
+          <tr>
+            <td>vote</td>
+            <td>answers</td>
+            <td>comments</td>
+          </tr>
+        </table>
+        <table class="title_and_author">
+          <tr>
+            <td><a href="/questions/<%=question.id%>"><%=question.title%></a></td>
+          </tr>
+        </table>
   <%end%>
-</ul>
+</div>
+
+<div class="answers">
+  
+</div>
+
+<div class="comments">
+
+</div>
