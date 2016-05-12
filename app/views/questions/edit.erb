@@ -1,0 +1,19 @@
+<h1>Edit the Question</h1>
+<% if @errors %>
+    <div>
+      <span>Your entry could not be saved:</span>
+      <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form method="post" action="/questions/<%= @question.id %>">
+    <input type="hidden" name="_method" value="put">
+    <input name="question[title]" type="text" value="<%= @question.try(:title) %>">
+    <input name="question[body]" type="text" value="<%= @question.try(:body) %>">
+    <input type="submit" value="Update Question" class="button">
+  </form>
+</main>
