@@ -3,10 +3,65 @@
   <%= @quote %>
 </p>
 
-<ul>
+<div class="question">
+  <h2>Questions you have asked:</h2>
   <% @questions.each do |question| %>
-      <li>
-        <a href="/questions/<%= question.id %>"><%= question.title %></a>
-      </li>
+        <table class="stats">
+          <tr>
+            <td><%=question.count_votes%></td>
+            <td><%=question.count_answers%></td>
+            <td><%=question.count_comments%></td>
+          </tr>
+          <tr>
+            <td>vote</td>
+            <td>answers</td>
+            <td>comments</td>
+          </tr>
+        </table>
+        <table class="title_and_author">
+          <tr>
+            <td><a href="/questions/<%=question.id%>"><%=question.title%></a></td>
+          </tr>
+        </table>
   <%end%>
-</ul>
+</div>
+
+<div class="answers">
+  <h2>Answers you have provided:</h2>
+  <% current_user.answers.each do |answer| %>
+    <table class="stats">
+      <tr>
+        <td><%=answer.count_votes%></td>
+        <td><%=answer.count_comments%></td>
+      </tr>
+      <tr>
+        <td>vote</td>
+        <td>comments</td>
+      </tr>
+    </table>
+    <table class="title_and_author">
+      <tr>
+        <td><a href="/questions/<%=answer.question_id%>"><%=answer.blurb%></a></td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+
+<div class="comments">
+  <h2>Comments you have made:</h2>
+  <% current_user.comments.each do |comment| %>
+    <table class="stats">
+      <tr>
+        <td><%=comment.count_votes%></td>
+      </tr>
+      <tr>
+        <td>vote</td>
+      </tr>
+    </table>
+    <table class="title_and_author">
+      <tr>
+        <td><a href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
+      </tr>
+    </table>
+  <% end %>
+</div>

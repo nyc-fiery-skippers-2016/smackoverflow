@@ -32,12 +32,13 @@
   <%= yield %>
   <footer>
     <ul class="nav_bar">
-      <% if logged_in? %>
-        <li class="nav_link"><a href="/questions/new">New Question</a></li>
-      <% else %>
-        <li class="nav_link"><a href="/login">Login</a></li>
-        <li class="nav_link"><a href="/users/new">Sign Up</a></li>
-      <% end %>
+        <% if logged_in? %>
+          <li class="nav_link" id="new-question-button"><a href="/questions/new">New Question</a></li>
+          <li class="nav_link hidden" id="popup-new-question"><%= erb :'questions/new', layout: false %></li>
+        <% else %>
+          <li class="nav_link"><a href="/login">Login</a></li>
+          <li class="nav_link"><a href="/users/new">Sign Up</a></li>
+        <% end %>
     </ul>
   </footer>
 </body>

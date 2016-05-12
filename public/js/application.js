@@ -19,4 +19,12 @@ $(document).ready(function(){
       $("#" + question_id).html(response);
     });
   });
+
+  $("#new-question-button").on('click',function(e){
+    e.preventDefault();
+    $(this).hide();
+    $("#popup-new-question").show();
+  });
+
+
 });
