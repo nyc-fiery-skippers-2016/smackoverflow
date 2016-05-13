@@ -1,7 +1,7 @@
-
 ul {
   list-style:none;
 }
+
 #question-answer-parent {
   margin: auto;
   width: 60%;
@@ -89,7 +89,7 @@ ul {
 }
 
 #answer-comment[type=submit]{
-  
+
 }
 
 #questionbody{
