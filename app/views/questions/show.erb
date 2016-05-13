@@ -24,8 +24,9 @@
       <% @answers.each do | answer | %>
         <div id="each-answer-container">
           <%= erb :'/votes/_vote', locals: { type: answer, vote_count: answer.count_votes } %>
-          <%= erb :'questions/_answer', locals: { answer: answer } %>
-
+            <div id="questionbody">
+              <%= erb :'questions/_answer', locals: { answer: answer } %>
+            </div>
           <div id="<%= answer.id %>">
             <% answer.comments.each do |answer_comment| %>
               <div id="answer-comment">
