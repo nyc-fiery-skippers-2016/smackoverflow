@@ -14,14 +14,8 @@
     </div>
   </div>
 
-<<<<<<< 5e5f1e6266aafbe9f252fedc3689d8a56fa6ecc2
 <div id="question-answers-container">
   <h2>Answers</h2>
-    <% @answers.each do | answer | %>
-      <%= erb :'/votes/_vote', locals: { type: answer } %>
-      <%= erb :'questions/_answer', locals: { answer: answer } %>
-=======
-  <div id="question-answers-container">
       <% @answers.each do | answer | %>
         <%= erb :'/votes/_vote', locals: { type: answer } %>
         <%= erb :'questions/_answer', locals: { answer: answer } %>
@@ -39,6 +33,5 @@
   <div class="new-answer-container">
     <%= erb :'answers/new' %>
   </div>
->>>>>>> Fix adding answer comments, need to fix comments on new answers
 
 </div>
