@@ -10,7 +10,7 @@ nav {
   top: 0;
 }
 
-.nav_bar {
+ul.header-nav_bar {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -18,6 +18,17 @@ nav {
   background-color: #403F36;
   opacity: 0.5;
   border-radius: 1px;
+}
+
+footer.nav_bar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #403F36;
+  opacity: 0.5;
+  border-radius: 1px;
+  margin-right:20%;
 }
 
 .nav_bar li {
@@ -50,6 +61,16 @@ footer {
   bottom: 0;
 
 }
-.list-item{
-  width:150%;
+#popup-new-question{
+  float:left;
+  width: 100%;
+  margin-right:20%;
+  padding:15%;
+  overflow:auto;
+}
+#popup-new-question input[name="title"]{
+  padding:3%;
+}
+#popup-new-question input[name="body"]{
+  padding:3%;
 }
