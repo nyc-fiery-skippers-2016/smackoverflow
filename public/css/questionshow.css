@@ -6,21 +6,23 @@ ul {
   width: 58%;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: rgba(64, 63, 54, 0.6);
   float: right;
+  color: black;
 }
 
 #question-comments-container {
-  border: 1px solid white;
   overflow: hidden;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
+  width: 70%;
+  float: right;
+  margin: 5px;
 }
 
 #question-comments {
-  border: 1px solid white;
   overflow: hidden;
-  width: 70%;
-  float: right;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 #vote-container {
@@ -47,15 +49,14 @@ ul {
 
 #vote-body-user-container {
   margin: 5px;
-  border: 1px solid red;
-  background-color: rgba(1, 0, 0, 0.6);
   overflow: hidden;
   padding: 10px;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #edit {
   display: inline-block;
-  border: 1px white solid;
   text-align: center;
   padding: 8px 0;
   width: 20%;
@@ -65,53 +66,54 @@ ul {
 
 #question-answers-container {
   clear: both;
-  margin: 10px;
-  border: 1px solid orange;
-  background-color: rgba(1, 0, 0, 0.6);
+  margin: 5px;
+  box-sizing: border-box;
   overflow: hidden;
   padding: 10px;
 }
 
 #single-answer-container {
-  border: 1px solid yellow;
   padding: 10px;
   overflow: hidden;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #new-answer-container {
   padding: 10px;
-  border: 1px solid blue;
   width: 58%;
+  margin: 5px;
   box-sizing: border-box;
   overflow: hidden;
   float: right;
+  box-sizing: border-box;
 }
 
 #each-answer-container {
-  border: 1px solid orange;
   overflow: hidden;
   padding: 10px;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #answer-comment {
   display: inline-block;
-  border: 1px white solid;
   text-align: center;
   padding: 8px 0;
   width: 60%;
   float: right;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 #answer-comment #new-comment[type=submit]{
   box-sizing: content-box;
   padding:10%;
-  background-color:blue;
 }
 
 #questionbody{
   box-sizing: border-box;
   padding: 10px;
   min-height: 117px;
-  border: 1px solid green;
+  background-color: rgba(64, 63, 54, 0.8);
 }

@@ -1,5 +1,5 @@
 <h1>Winter Is Coming, <%= current_user.username %></h1>
-<div class="question">
+<div class="question" id="q-text">
   <p>
     <%= @quote %>
   </p>
@@ -23,7 +23,7 @@
         </table>
         <table class="title_and_author">
           <tr>
-            <td><a href="/questions/<%=question.id%>"><%=question.title%></a></td>
+            <td><a id="q-text" href="/questions/<%=question.id%>"><%=question.title%></a></td>
           </tr>
         </table>
       </div>
@@ -46,7 +46,7 @@
     </table>
     <table class="title_and_author">
       <tr>
-        <td><a href="/questions/<%=answer.question_id%>"><%=answer.blurb%></a></td>
+        <td><a id="q-text" href="/questions/<%=answer.question_id%>"><%=answer.blurb%></a></td>
       </tr>
     </table>
   </div>
@@ -67,7 +67,7 @@
     </table>
     <table class="title_and_author">
       <tr>
-        <td><a href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
+        <td><a id="q-text" href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
       </tr>
     </table>
   </div>

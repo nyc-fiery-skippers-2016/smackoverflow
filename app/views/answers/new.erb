@@ -3,7 +3,7 @@
 
 <form class="new-answer-form" action="/answers" method="post">
   <input type="hidden" name="answer[question_id]" value="<%= @question.id %>">
-  <input type="hidden" name="answer[user_id]" value="<%= current_user.id %>">
+  <input type="hidden" name="answer[user_id]" value="<%= logged_in? ? current_user.id : 0 %>">
   <input type="text" name="answer[body]" placeholder="I drink and I know things...">
   <input type="submit" value="Submit Answer">
 </form>
