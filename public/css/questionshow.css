@@ -1,3 +1,7 @@
+* {
+  overflow: hidden;
+}
+
 #question-answer-parent {
   margin: auto;
   width: 60%;
@@ -6,6 +10,7 @@
 #vote-container {
   float: left;
   clear: left;
+  padding: 12px;
 }
 
 .vote {
@@ -27,11 +32,22 @@
 #vote-body-user-container {
   margin: 10px;
   border: 1px solid red;
+  background-color: rgba(1, 0, 0, 0.5);
+}
+
+#edit {
+  display: inline-block;
+  border: 1px white solid;
+  text-align: center;
+  padding: 8px 0;
+  width: 20%;
+  float: right;
 }
 
 #question-answers-container {
   margin: 10px;
   border: 1px solid orange;
+  background-color: rgba(1, 0, 0, 0.5);
 }
 
 #single-answer-container {
