@@ -9,8 +9,10 @@
 
     <div id="question-comments-container">
       <% @comments.each do | comment | %>
+      <div id="question-comments">
         <%= erb :'/votes/_vote', locals: { type: comment, vote_count: comment.count_votes} %>
         <%= erb :'questions/_comment', locals: { comment: comment } %>
+      </div>
       <% end %>
       <div id="answer-comment">
         <%= erb :'/comments/new', locals: { type: @question } %>

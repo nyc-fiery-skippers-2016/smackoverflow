@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  background: url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcQeBn6ttFubnZIwuCclYoWUrQ5CzUxKJAdGerfOdrOQdnYAPWppzdhAKgBowjjruiCLxKeKQ.7IO2_2p4P_o2DiuNKN8rlD.vBNBt7RCvrQKj3n6UWeKDYz7JGx9PrC0.3O3IexVjtmmKZMrCosvanH7Hx9vR2fVRoOWJg1_EPDc-&format=jpg');
+  /*background: url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcQeBn6ttFubnZIwuCclYoWUrQ5CzUxKJAdGerfOdrOQdnYAPWppzdhAKgBowjjruiCLxKeKQ.7IO2_2p4P_o2DiuNKN8rlD.vBNBt7RCvrQKj3n6UWeKDYz7JGx9PrC0.3O3IexVjtmmKZMrCosvanH7Hx9vR2fVRoOWJg1_EPDc-&format=jpg');*/
+  background-image:      url("http://www.media3.hw-static.com/wp-content/uploads/game-of-thrones-ghost-hbo-081415-1276x850.jpg ");
   background-repeat: no-repeat;
+  background-size: cover !important;
   background-attachment: fixed;
   font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
-  color: white;
 }
 
 nav {

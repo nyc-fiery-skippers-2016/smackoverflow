@@ -3,16 +3,29 @@ ul {
 }
 
 #question-answer-parent {
-  margin: auto;
-  width: 60%;
+  width: 50%;
   box-sizing: border-box;
   overflow: hidden;
+  background-color: black;
+}
+
+#question-comments-container {
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+#question-comments {
+  border: 1px solid white;
+  overflow: hidden;
+  width: 70%;
+  float: right;
+  padding: 10px;
 }
 
 #vote-container {
   float: left;
   clear: left;
-  padding: 12px;
+  padding: 2px;
 }
 
 .vote {
@@ -24,7 +37,7 @@ ul {
 
 .vote li {
   text-align: center;
-  margin: 10px;
+  margin: 2px;
 }
 
 .up-vote, .down-vote {
@@ -32,10 +45,11 @@ ul {
 }
 
 #vote-body-user-container {
-  margin: 10px;
+  margin: 5px;
   border: 1px solid red;
   background-color: rgba(1, 0, 0, 0.5);
   overflow: hidden;
+  padding: 10px;
 }
 
 #edit {
@@ -47,28 +61,26 @@ ul {
   float: right;
   overflow: hidden;
 }
-#edit[type=submit]{
 
-}
 #question-answers-container {
   clear: both;
   margin: 10px;
   border: 1px solid orange;
   background-color: rgba(1, 0, 0, 0.5);
   overflow: hidden;
+  padding: 10px;
 }
 
 #single-answer-container {
   border: 1px solid yellow;
-  padding: 5%;
+  padding: 10px;
   overflow: hidden;
 }
 
 #new-answer-container {
-  padding: 2%;
+  padding: 10px;
   border: 1px solid blue;
   width: 60%;
-  margin: auto;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -76,6 +88,7 @@ ul {
 #each-answer-container {
   border: 1px solid orange;
   overflow: hidden;
+  padding: 10px;
 }
 
 #answer-comment {
