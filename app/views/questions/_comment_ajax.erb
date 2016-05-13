@@ -1,3 +1,23 @@
+<div id="vote-container">
+  <ul class="vote">
+    <li><form class="up-vote" action="/votes" method="post">
+      <input type="hidden" name="vote[voteable_id]" value="<%= type.id %>">
+      <input type="hidden" name="vote[voteable_type]" value="<%= type.class.to_s %>">
+      <input type="hidden" name="vote[user_id]" value="<%= current_user.id %>">
+      <input type="hidden" name="vote[value]" value="1">
+      <input id="upvote" type="submit" value="&#9651;">
+    </form></li>
+    <li><%= answer.count_votes %></li>
+    <li><form class="down-vote" action="/votes" method="post">
+      <input type="hidden" name="vote[voteable_id]" value="<%= type.id %>">
+      <input type="hidden" name="vote[voteable_type]" value="<%= type.class.to_s %>">
+      <input type="hidden" name="vote[user_id]" value="<%= current_user.id %>">
+      <input type="hidden" name="vote[value]" value="-1">
+      <input id="downvote"type="submit" value="&#9661;">
+    </form></li>
+  </ul>
+</div>
+
 <article class="answer-comments">
   <ul>
     <li><%= answer.body %></li>
