@@ -3,10 +3,11 @@ ul {
 }
 
 #question-answer-parent {
-  width: 50%;
+  width: 58%;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: black;
+  background-color: rgba(64, 63, 54, 0.6);
+  float: right;
 }
 
 #question-comments-container {
@@ -47,7 +48,7 @@ ul {
 #vote-body-user-container {
   margin: 5px;
   border: 1px solid red;
-  background-color: rgba(1, 0, 0, 0.5);
+  background-color: rgba(1, 0, 0, 0.6);
   overflow: hidden;
   padding: 10px;
 }
@@ -66,7 +67,7 @@ ul {
   clear: both;
   margin: 10px;
   border: 1px solid orange;
-  background-color: rgba(1, 0, 0, 0.5);
+  background-color: rgba(1, 0, 0, 0.6);
   overflow: hidden;
   padding: 10px;
 }
@@ -80,9 +81,10 @@ ul {
 #new-answer-container {
   padding: 10px;
   border: 1px solid blue;
-  width: 60%;
+  width: 58%;
   box-sizing: border-box;
   overflow: hidden;
+  float: right;
 }
 
 #each-answer-container {
