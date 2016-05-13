@@ -41,10 +41,12 @@ $(document).ready(function(){
       var id = e.target.parentElement.getAttribute("id")
       if (data.indexOf('Question') >= 0) {
         debugger;
+        // $(target.parent()).append(response);
+        console.log(target)
         $('#question-comments-container').append(response);
       }
       else {
-        $("#"+id).append(response);
+        $(target).parent().parent().append(response);
       }
     });
   });
