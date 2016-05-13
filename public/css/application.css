@@ -48,4 +48,8 @@ li a:hover {
 footer {
   position: fixed;
   bottom: 0;
+
+}
+.list-item{
+  width:150%;
 }

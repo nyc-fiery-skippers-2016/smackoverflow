@@ -26,8 +26,4 @@ $(document).ready(function(){
     $("#popup-new-question").show();
   });
 
-  $("#upvote").on('click', function(e){
-    e.preventDefault();
-    var target=$(this).
-  });
 });
