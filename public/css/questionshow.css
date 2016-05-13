@@ -6,7 +6,7 @@
 #vote-container {
   float: left;
   clear: left;
-  background-color: white;
+  background-color: transparent;
 }
 
 #question-container > h2 {
@@ -27,25 +27,29 @@
   float: right;*/
 }
 
-.up-vote input[type='submit'] {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 0px; line-height: 0px;
-  height: 30px; width: 30px;
-  border: 0;
-  background: url('http://images.uesp.net/8/8b/SR-icon-weapon-NordHeroSword.png');
-  background-size: contain;
-  padding-bottom: 5px;
+.vote {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
-.down-vote input[type='submit'] {
+
+.vote li {
+  text-align: center;
+  margin: 10px;
+}
+
+.up-vote {
   display: inline-block;
-  cursor: pointer;
-  font-size: 0px; line-height: 0px;
-  height: 30px; width: 30px;
-  border: 0;
-  background: url('http://images.uesp.net/8/8b/SR-icon-weapon-NordHeroSword.png');
-  background-size: contain;
-  transform: rotate(180deg);
+}
+.down-vote {
+  display: inline-block;
+}
+
+#upvote {
+}
+
+#downvote {
 }
 
 .question-comments > ul {
