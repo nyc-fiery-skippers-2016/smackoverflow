@@ -1,32 +1,55 @@
 .container {
-  margin: auto;
-  width: 50%;
+  width: 58%;
   color: white;
+  float: right;
+  clear: both;
 }
 
-h1 {
-  text-align: center;
+h1, h2 {
   color: white;
+  text-align: right;
+  margin: 20px;
 }
 
 .question {
   clear: both;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(64, 63, 54, 0.6);
+  border: 1px solid white;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
 }
 
 .stats {
   overflow:hidden;
   float: right;
 }
+
 .stats td {
   text-align: center;
 }
 
 .title_and_author {
+  padding-top: 8px;
   overflow: hidden;
-  float: left;
+  width: 70%;
 }
+
 .title_and_author a {
   text-decoration: none;
+  color: black;
+}
+
+.title_and_author a:hover {
+  color: red;
+}
+
+#q-text {
+  font-size: large;
   color: white;
+}
+
+a#author {
+  float: right;
+  font-weight: bold;
 }

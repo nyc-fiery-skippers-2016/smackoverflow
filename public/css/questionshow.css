@@ -3,16 +3,32 @@ ul {
 }
 
 #question-answer-parent {
-  margin: auto;
-  width: 60%;
+  width: 58%;
   box-sizing: border-box;
   overflow: hidden;
+  float: right;
+  color: black;
+}
+
+#question-comments-container {
+  overflow: hidden;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
+  width: 70%;
+  float: right;
+  margin: 5px;
+}
+
+#question-comments {
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #vote-container {
   float: left;
   clear: left;
-  padding: 12px;
+  padding: 2px;
 }
 
 .vote {
@@ -24,7 +40,7 @@ ul {
 
 .vote li {
   text-align: center;
-  margin: 10px;
+  margin: 2px;
 }
 
 .up-vote, .down-vote {
@@ -32,71 +48,72 @@ ul {
 }
 
 #vote-body-user-container {
-  margin: 10px;
-  border: 1px solid red;
-  background-color: rgba(1, 0, 0, 0.5);
+  margin: 5px;
   overflow: hidden;
+  padding: 10px;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #edit {
   display: inline-block;
-  border: 1px white solid;
   text-align: center;
   padding: 8px 0;
   width: 20%;
   float: right;
   overflow: hidden;
 }
-#edit[type=submit]{
 
-}
 #question-answers-container {
   clear: both;
-  margin: 10px;
-  border: 1px solid orange;
-  background-color: rgba(1, 0, 0, 0.5);
+  margin: 5px;
+  box-sizing: border-box;
   overflow: hidden;
+  padding: 10px;
 }
 
 #single-answer-container {
-  border: 1px solid yellow;
-  padding: 5%;
+  padding: 10px;
   overflow: hidden;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #new-answer-container {
-  padding: 2%;
-  border: 1px solid blue;
-  width: 60%;
-  margin: auto;
+  padding: 10px;
+  width: 58%;
+  margin: 5px;
   box-sizing: border-box;
   overflow: hidden;
+  float: right;
+  box-sizing: border-box;
 }
 
 #each-answer-container {
-  border: 1px solid orange;
   overflow: hidden;
+  padding: 10px;
+  background-color: rgba(64, 63, 54, 0.8);
+  box-sizing: border-box;
 }
 
 #answer-comment {
   display: inline-block;
-  border: 1px white solid;
   text-align: center;
   padding: 8px 0;
   width: 60%;
   float: right;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 #answer-comment #new-comment[type=submit]{
   box-sizing: content-box;
   padding:10%;
-  background-color:blue;
 }
 
 #questionbody{
   box-sizing: border-box;
   padding: 10px;
   min-height: 117px;
-  border: 1px solid green;
+  background-color: rgba(64, 63, 54, 0.8);
 }

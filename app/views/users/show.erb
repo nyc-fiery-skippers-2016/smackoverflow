@@ -1,11 +1,14 @@
 <h1>Winter Is Coming, <%= current_user.username %></h1>
-<p>
-  <%= @quote %>
-</p>
+<div class="question" id="q-text">
+  <p>
+    <%= @quote %>
+  </p>
+</div>
 
-<div class="question">
+<div class="container">
   <h2>Questions you have asked:</h2>
   <% @questions.each do |question| %>
+    <div class="question">
         <table class="stats">
           <tr>
             <td><%=question.count_votes%></td>
@@ -20,15 +23,17 @@
         </table>
         <table class="title_and_author">
           <tr>
-            <td><a href="/questions/<%=question.id%>"><%=question.title%></a></td>
+            <td><a id="q-text" href="/questions/<%=question.id%>"><%=question.title%></a></td>
           </tr>
         </table>
+      </div>
   <%end%>
 </div>
 
-<div class="answers">
+<div class="container">
   <h2>Answers you have provided:</h2>
   <% current_user.answers.each do |answer| %>
+  <div class="question">
     <table class="stats">
       <tr>
         <td><%=answer.count_votes%></td>
@@ -41,15 +46,17 @@
     </table>
     <table class="title_and_author">
       <tr>
-        <td><a href="/questions/<%=answer.question_id%>"><%=answer.blurb%></a></td>
+        <td><a id="q-text" href="/questions/<%=answer.question_id%>"><%=answer.blurb%></a></td>
       </tr>
     </table>
+  </div>
   <% end %>
 </div>
 
-<div class="comments">
+<div class="container">
   <h2>Comments you have made:</h2>
   <% current_user.comments.each do |comment| %>
+  <div class="question">
     <table class="stats">
       <tr>
         <td><%=comment.count_votes%></td>
@@ -60,8 +67,9 @@
     </table>
     <table class="title_and_author">
       <tr>
-        <td><a href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
+        <td><a id="q-text" href="/questions/<%=comment.question.id%>"><%=comment.blurb%></a></td>
       </tr>
     </table>
+  </div>
   <% end %>
 </div>
