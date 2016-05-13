@@ -26,8 +26,6 @@ $(document).ready(function(){
     $("#popup-new-question").show();
   });
 
-  // $(".new-comment").submit(function(e) {
-
   $("#question-answer-parent").on('submit', '.new-comment',function(e) {
     e.preventDefault();
     var target = e.target;

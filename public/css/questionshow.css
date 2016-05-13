@@ -88,8 +88,10 @@ ul {
   overflow: hidden;
 }
 
-#answer-comment[type=submit]{
-
+#answer-comment #new-comment[type=submit]{
+  box-sizing: content-box;
+  padding:10%;
+  background-color:blue;
 }
 
 #questionbody{
