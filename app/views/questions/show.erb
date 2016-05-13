@@ -2,22 +2,23 @@
 <div id ="question-answer-parent">
 
   <div id="question-container">
-    <%= erb :'votes/_vote', locals: { type: @question, vote_count: @question.count_votes } %>
-    <%= erb :'questions/_question', locals: { question: @question } %>
+    <div id="vote-body-user-container">
+      <%= erb :'votes/_vote', locals: { type: @question, vote_count: @question.count_votes } %>
+      <%= erb :'questions/_question', locals: { question: @question } %>
+    </div>
 
-    <div class="question-comments-container">
+    <div id="question-comments-container">
       <% @comments.each do | comment | %>
         <%= erb :'/votes/_vote', locals: { type: comment, vote_count: comment.count_votes} %>
         <%= erb :'questions/_comment', locals: { comment: comment } %>
+        <%= erb :'/comments/new', locals: { type: @question } %>
       <% end %>
-
-
-      <%= erb :'/comments/new', locals: { type: @question } %>
     </div>
   </div>
 
-<div id="question-answers-container">
-  <h2>Answers</h2>
+  <div id="question-answers-container">
+    <h2>Answers</h2>
+
       <% @answers.each do | answer | %>
         <%= erb :'/votes/_vote', locals: { type: answer, vote_count: answer.count_votes } %>
         <%= erb :'questions/_answer', locals: { answer: answer } %>
@@ -27,12 +28,13 @@
             <%= erb :'votes/_vote', locals: {type: answer_comment, vote_count: answer.count_votes} %>
             <%=erb :'questions/_comment', locals: {comment: answer_comment}%>
           <% end %>
-        <%= erb :'/comments/new', locals: { type: answer } %>
-      </div>
-    <% end %>
+          <%= erb :'/comments/new', locals: { type: answer } %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="new-answer-container">
+  <div id="new-answer-container">
     <%= erb :'answers/new' %>
   </div>
 

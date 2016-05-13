@@ -1,4 +1,4 @@
-#question-container {
+#question-answer-parent {
   margin: auto;
   width: 60%;
 }
@@ -6,11 +6,6 @@
 #vote-container {
   float: left;
   clear: left;
-}
-
-#question-container > h2 {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .vote {
@@ -25,10 +20,28 @@
   margin: 10px;
 }
 
-.up-vote {
+.up-vote, .down-vote {
   display: inline-block;
 }
 
-.down-vote {
-  display: inline-block;
+#vote-body-user-container {
+  margin: 10px;
+  border: 1px solid red;
+}
+
+#question-answers-container {
+  margin: 10px;
+  border: 1px solid orange;
+}
+
+#single-answer-container {
+  width: 90%;
+  border: 1px solid yellow;
+  margin: auto;
+  padding: 5%;
+}
+
+#new-answer-container {
+  padding: 2%;
+  border: 1px solid blue;
 }
