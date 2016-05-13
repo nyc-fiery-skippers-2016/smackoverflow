@@ -43,7 +43,7 @@ $(document).ready(function(){
       var id = e.target.parentElement.getAttribute("id")
       if (data.indexOf('Question') >= 0) {
         debugger;
-        $('.question-comments-container').append(response);
+        $('#question-comments-container').append(response);
       }
       else {
         $("#"+id).append(response);
@@ -51,12 +51,13 @@ $(document).ready(function(){
     });
   });
 
-  $('.new-answer-container').on( 'submit', '.new-answer-form', function(e) {
+  $('#new-answer-container').on( 'submit', '.new-answer-form', function(e) {
     e.preventDefault()
     var target = e.target;
     var type = target.method;
     var url = target.action;
     var data = $(target).serialize();
+    debugger;
 
     $.ajax({
       type: type,
