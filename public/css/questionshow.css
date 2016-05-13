@@ -1,3 +1,7 @@
+
+ul {
+  list-style:none;
+}
 #question-answer-parent {
   margin: auto;
   width: 60%;
@@ -43,7 +47,9 @@
   float: right;
   overflow: hidden;
 }
+#edit[type=submit]{
 
+}
 #question-answers-container {
   clear: both;
   margin: 10px;
@@ -80,4 +86,15 @@
   width: 60%;
   float: right;
   overflow: hidden;
+}
+
+#answer-comment[type=submit]{
+  
+}
+
+#questionbody{
+  box-sizing: border-box;
+  padding: 10px;
+  min-height: 117px;
+  border: 1px solid green;
 }
