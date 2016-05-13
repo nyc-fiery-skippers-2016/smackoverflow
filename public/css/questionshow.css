@@ -6,25 +6,11 @@
 #vote-container {
   float: left;
   clear: left;
-  background-color: transparent;
 }
 
 #question-container > h2 {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  overflow: hidden;
-}
-#question-container > p {
-  display: block;
-}
-
-#question-container p {
-  /*display: inline-block;
-  float: right;*/
-}
-
-#question-container > form {
-  /*display: inline-block;
-  float: right;*/
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .vote {
@@ -42,61 +28,7 @@
 .up-vote {
   display: inline-block;
 }
+
 .down-vote {
   display: inline-block;
 }
-
-#upvote {
-}
-
-#downvote {
-}
-
-.question-comments > ul {
-  float: right;
-  list-style-type: none;
-  overflow: hidden;
-  padding: 0;
-  font-style: italic;
-  clear:right;
-}
-
-.new-comment input[type='text']{
-  float: right;
-  height: 30px;
-  width: 35%;
-  clear: both;
-}
-.new-comment input[type='submit']{
-  float: right;
-  clear:both;
-}
-
-/*ANSWERS*/
-
-#question-answers-container {
-  margin: auto;
-  position: relative;
-  top: 40px;
-  width: 60%;
-}
-  #question-answers-container > h2 {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  }
-
-  #question-answers-container > ul {
-    list-style-type: none;
-    overflow: hidden;
-    padding: 0;
-  }
-
-.new-answer-form {
-  clear: both;
-}
-  .new-answer-form input[type='text']{
-    height: 30px;
-    width: 35%;
-  }
-  .new-answer-form input[type='submit']{
-
-  }
